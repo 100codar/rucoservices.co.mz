@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUCO SERVIÇOS | Materiais de Construção e Instalação de Janelas em Moçambique</title>
+    <meta name="description" content="RUCO SERVIÇOS — Materiais de construção de alta qualidade e serviços profissionais de instalação de janelas e acabamentos em Moçambique. Precisão, segurança e excelência.">
+    
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RUCO SERVIÇOS | Materiais de Construção e Instalação de Janelas">
+    <meta property="og:description" content="Soluções profissionais para construção, instalação de janelas e acabamentos com precisão e qualidade em Moçambique.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Third Party Libraries CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* ==========================================================================
+           1. CORE CSS VARIABLES & RESET
+           ========================================================================== */
+        :root {
+            --clr-primary: #0a192f;        /* Azul Industrial Profundo */
+            --clr-primary-light: #172a45;  /* Azul Suave */
+            --clr-accent: #f59e0b;         /* Ambar/Laranja de Destaque */
+            --clr-accent-hover: #d97706;
+            --clr-steel: #64748b;          /* Cinza Metálico / Aço */
+            --clr-bg-light: #f8fafc;       /* Fundo Claro */
+            --clr-card: #ffffff;
+            --clr-text-dark: #0f172a;
+            --clr-text-muted: #475569;
+            --clr-text-light: #f1f5f9;
+            --clr-border: #e2e8f0;
+            
+            --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--clr-bg-light);
+            color: var(--clr-text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s var(--transition-smooth);
+        }
+
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; object-fit: cover; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--clr-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--clr-steel); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--clr-accent); }
+
+        /* ==========================================================================
+           2. UTILITIES & ANIMATIONS
+           ========================================================================== */
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .section-padding { padding: 100px 0; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s var(--transition-smooth);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background-color: var(--clr-accent);
+            color: var(--clr-primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--clr-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.2);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--clr-text-light);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--clr-text-light);
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--clr-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--clr-primary);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .section-title.light { color: var(--clr-text-light); }
+
+        /* Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s var(--transition-smooth), transform 0.8s var(--transition-smooth);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==========================================================================
+           3. HEADER & NAVIGATION
+           ========================================================================== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.4s var(--transition-smooth);
+        }
+
+        .header.scrolled {
+            background-color: rgba(10, 25, 47, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--clr-text-light);
+            letter-spacing: 1px;
+        }
+
+        .logo span { color: var(--clr-accent); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-link {
+            color: var(--clr-text-light);
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            opacity: 0.85;
+        }
+
+        .nav-link:hover { opacity: 1; color: var(--clr-accent); }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--clr-accent);
+            transition: width 0.3s var(--transition-smooth);
+        }
+
+        .nav-link:hover::after { width: 100%; }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--clr-text-light);
+            cursor: pointer;
+        }
+
+        /* Mobile Menu Panel */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background-color: var(--clr-primary);
+            z-index: 1001;
+            padding: 80px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            transition: right 0.4s var(--transition-smooth);
+            box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+        }
+
+        .mobile-menu.active { right: 0; }
+
+        .mobile-menu-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            color: var(--clr-text-light);
+            cursor: pointer;
+        }
+
+        .mobile-menu .nav-link {
+            font-size: 1.2rem;
+            display: block;
+        }
+
+        /* ==========================================================================
+           4. HERO SECTION
+           ========================================================================== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            color: var(--clr-text-light);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(10,25,47,0.7) 0%, rgba(10,25,47,0.85) 100%),
+                        url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            transform: scale(1.05);
+            animation: heroZoom 10s infinite alternate ease-in-out;
+        }
+
+        @keyframes heroZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.08); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #cbd5e1;
+            margin-bottom: 32px;
+            max-width: 650px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 24px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 24px;
+        }
+
+        .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: var(--clr-accent);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.6);
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+            40% { transform: translate(-50%, -8px); }
+            60% { transform: translate(-50%, -4px); }
+        }
+
+        /* ==========================================================================
+           5. ABOUT SECTION
+           ========================================================================== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-img-wrapper {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .about-img-wrapper img {
+            width: 100%;
+            height: 500px;
+            transition: transform 0.6s var(--transition-smooth);
+        }
+
+        .about-img-wrapper:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-experience-badge {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--clr-primary);
+            color: var(--clr-text-light);
+            padding: 20px;
+            border-left: 4px solid var(--clr-accent);
+            border-radius: 4px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+            border-top: 1px solid var(--clr-border);
+            padding-top: 32px;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--clr-primary);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--clr-text-muted);
+            font-weight: 500;
+        }
+
+        /* ==========================================================================
+           6. SERVICES SECTION (EDITORIAL DESIGN)
+           ========================================================================== */
+        .services-section {
+            background-color: var(--clr-primary);
+            color: var(--clr-text-light);
+        }
+
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+        }
+
+        .service-item {
+            display: grid;
+            grid-template-columns: 80px 1fr 2fr 60px;
+            align-items: center;
+            padding: 32px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            cursor: pointer;
+            transition: all 0.4s var(--transition-smooth);
+        }
+
+        .service-item:hover {
+            background-color: rgba(255,255,255,0.02);
+            padding-left: 16px;
+        }
+
+        .service-num {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--clr-accent);
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .service-desc {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            padding-right: 20px;
+        }
+
+        .service-arrow {
+            display: flex;
+            justify-content: flex-end;
+            color: var(--clr-accent);
+            transition: transform 0.3s var(--transition-smooth);
+        }
+
+        .service-item:hover .service-arrow {
+            transform: translateX(8px);
+        }
+
+        /* ==========================================================================
+           7. PROCESS SECTION
+           ========================================================================== */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .process-step {
+            position: relative;
+            padding-top: 20px;
+            border-top: 2px solid var(--clr-border);
+            transition: border-color 0.4s var(--transition-smooth);
+        }
+
+        .process-step.active {
+            border-color: var(--clr-accent);
+        }
+
+        .step-num {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--clr-accent);
+            margin-bottom: 8px;
+        }
+
+        .step-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--clr-primary);
+        }
+
+        .step-desc {
+            font-size: 0.85rem;
+            color: var(--clr-text-muted);
+        }
+
+        /* ==========================================================================
+           8. MASONRY GALLERY & LIGHTBOX
+           ========================================================================== */
+        .gallery-filter {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: none;
+            border: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--clr-text-muted);
+            cursor: pointer;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--clr-primary);
+            color: var(--clr-text-light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 260px;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery-item.tall { grid-row: span 2; }
+        .gallery-item.wide { grid-column: span 2; }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s var(--transition-smooth);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,25,47,0.85) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            opacity: 0;
+            transition: opacity 0.4s var(--transition-smooth);
+        }
+
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+        .gallery-cat { font-size: 0.75rem; color: var(--clr-accent); text-transform: uppercase; font-weight: 700; }
+        .gallery-title { font-size: 1.1rem; color: var(--clr-text-light); font-weight: 700; }
+
+        /* ==========================================================================
+           9. TESTIMONIALS & TRUST WORDS
+           ========================================================================== */
+        .testimonials-section {
+            background-color: #f1f5f9;
+        }
+
+        .testimonial-card {
+            background: var(--clr-card);
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--clr-accent);
+        }
+
+        .stars { color: var(--clr-accent); margin-bottom: 16px; display: flex; gap: 4px; }
+        .testimonial-text { font-style: italic; color: var(--clr-text-dark); margin-bottom: 20px; }
+        .client-name { font-weight: 700; color: var(--clr-primary); font-size: 0.95rem; }
+        .client-role { font-size: 0.8rem; color: var(--clr-steel); }
+
+        .trust-words {
+            padding: 60px 0;
+            background-color: var(--clr-primary);
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .trust-track {
+            display: inline-flex;
+            gap: 60px;
+            animation: marquee 25s linear infinite;
+        }
+
+        .trust-word {
+            font-size: 2rem;
+            font-weight: 800;
+            color: rgba(255,255,255,0.2);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+        }
+
+        .trust-word:hover { color: var(--clr-accent); }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ==========================================================================
+           10. CTA & CONTACT SECTION
+           ========================================================================== */
+        .cta-section {
+            background: linear-gradient(rgba(10,25,47,0.9), rgba(10,25,47,0.9)),
+                        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80') fixed center/cover;
+            color: var(--clr-text-light);
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-icon {
+            background-color: rgba(10,25,47,0.05);
+            padding: 12px;
+            border-radius: 6px;
+            color: var(--clr-accent);
+        }
+
+        .contact-form {
+            background-color: var(--clr-card);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--clr-primary);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--clr-border);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--clr-accent);
+        }
+
+        textarea.form-control { resize: vertical; height: 120px; }
+
+        /* ==========================================================================
+           11. WHATSAPP & FOOTER
+           ========================================================================== */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(37,211,102,0.3);
+            z-index: 999;
+            transition: transform 0.3s var(--transition-smooth);
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background-color: #060e1a;
+            color: #94a3b8;
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            color: var(--clr-text-light);
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .footer-title {
+            color: var(--clr-text-light);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a:hover { color: var(--clr-accent); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* ==========================================================================
+           12. RESPONSIVE MEDIA QUERIES
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .process-steps { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .header .btn { display: none; }
+            .hamburger { display: block; }
+            .hero-title { font-size: 2.4rem; }
+            .service-item { grid-template-columns: 1fr; gap: 8px; }
+            .service-arrow { display: none; }
+            .process-steps { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-item.tall, .gallery-item.wide { grid-row: auto; grid-column: auto; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                RUCO <span>SERVIÇOS</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio" class="nav-link">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre Nós</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="#avaliacoes" class="nav-link">Avaliações</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <a href="#contacto" class="btn btn-primary">Solicitar Orçamento</a>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir Menu">
+                <i data-lucide="menu" size="28"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU PANEL -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="closeMenuBtn" aria-label="Fechar Menu">
+            <i data-lucide="x" size="28"></i>
+        </button>
+        <a href="#inicio" class="nav-link mobile-link">Início</a>
+        <a href="#sobre" class="nav-link mobile-link">Sobre Nós</a>
+        <a href="#servicos" class="nav-link mobile-link">Serviços</a>
+        <a href="#galeria" class="nav-link mobile-link">Galeria</a>
+        <a href="#avaliacoes" class="nav-link mobile-link">Avaliações</a>
+        <a href="#contacto" class="nav-link mobile-link">Contacto</a>
+        <a href="#contacto" class="btn btn-primary" style="margin-top: 20px;">Solicitar Orçamento</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content reveal">
+                <span class="section-tag">RUCO SERVIÇOS</span>
+                <h1 class="hero-title">Soluções que dão forma, segurança e qualidade ao seu espaço.</h1>
+                <p class="hero-subtitle">Materiais de construção e serviços profissionais de instalação de janelas com foco em precisão, durabilidade e alto padrão de acabamento.</p>
+                <div class="hero-actions">
+                    <a href="#contacto" class="btn btn-primary">Solicitar Orçamento <i data-lucide="arrow-right" size="18"></i></a>
+                    <a href="#servicos" class="btn btn-outline">Conhecer os Serviços</a>
+                </div>
+                <div class="hero-badges">
+                    <div class="badge-item"><i data-lucide="check-circle-2" size="18"></i> QUALIDADE</div>
+                    <div class="badge-item"><i data-lucide="check-circle-2" size="18"></i> PRECISÃO</div>
+                    <div class="badge-item"><i data-lucide="check-circle-2" size="18"></i> PROFISSIONALISMO</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>SCROLL PARA EXPLORAR</span>
+            <i data-lucide="chevron-down" size="16"></i>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section-padding" id="sobre">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img-wrapper reveal">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Equipe de instalação RUCO SERVIÇOS">
+                    <div class="about-experience-badge">
+                        <strong style="font-size: 1.5rem; display: block; color: var(--clr-accent);">100%</strong>
+                        <span>Compromisso em Cada Detalhe</span>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <span class="section-tag">Sobre a Empresa</span>
+                    <h2 class="section-title">Construímos confiança em cada trabalho.</h2>
+                    <p style="color: var(--clr-text-muted); margin-bottom: 20px;">
+                        A <strong>RUCO SERVIÇOS</strong> é uma empresa moçambicana especializada no fornecimento de materiais de construção de excelência e serviços técnicos de instalação de janelas e acabamentos para residências, escritórios e empreendimentos comerciais.
+                    </p>
+                    <p style="color: var(--clr-text-muted); margin-bottom: 30px;">
+                        Nosso compromisso baseia-se no alinhamento rigoroso entre materiais duráveis, técnica apurada e atendimento próximo, assegurando entregas impecáveis do projeto à conclusão.
+                    </p>
+
+                    <div class="stats-grid">
+                        <div>
+                            <div class="stat-number">+<span class="counter" data-target="150">0</span></div>
+                            <div class="stat-label">Projetos Concluídos</div>
+                        </div>
+                        <div>
+                            <div class="stat-number"><span class="counter" data-target="98">0</span>%</div>
+                            <div class="stat-label">Satisfação dos Clientes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION (EDITORIAL) -->
+    <section class="services-section section-padding" id="servicos">
+        <div class="container">
+            <span class="section-tag">O Que Fazemos</span>
+            <h2 class="section-title light">Serviços e Soluções Especializadas</h2>
+
+            <div class="services-list">
+                <div class="service-item reveal">
+                    <span class="service-num">01</span>
+                    <h3 class="service-title">Materiais de Construção</h3>
+                    <p class="service-desc">Fornecimento de materiais de primeira linha para todas as fases de construção e renovação.</p>
+                    <div class="service-arrow"><i data-lucide="arrow-up-right" size="24"></i></div>
+                </div>
+
+                <div class="service-item reveal">
+                    <span class="service-num">02</span>
+                    <h3 class="service-title">Instalação de Janelas</h3>
+                    <p class="service-desc">Montagem técnica de sistemas de janelas modernas com estanqueidade, segurança e acabamento preciso.</p>
+                    <div class="service-arrow"><i data-lucide="arrow-up-right" size="24"></i></div>
+                </div>
+
+                <div class="service-item reveal">
+                    <span class="service-num">03</span>
+                    <h3 class="service-title">Soluções para Obras</h3>
+                    <p class="service-desc">Apoio técnico e fornecimento especializado de insumos estruturais para empreendimentos.</p>
+                    <div class="service-arrow"><i data-lucide="arrow-up-right" size="24"></i></div>
+                </div>
+
+                <div class="service-item reveal">
+                    <span class="service-num">04</span>
+                    <h3 class="service-title">Acabamentos Finos</h3>
+                    <p class="service-desc">Aplicação de soluções de acabamento que valorizam o design e a estética do espaço.</p>
+                    <div class="service-arrow"><i data-lucide="arrow-up-right" size="24"></i></div>
+                </div>
+
+                <div class="service-item reveal">
+                    <span class="service-num">05</span>
+                    <h3 class="service-title">Estruturas e Vidros</h3>
+                    <p class="service-desc">Soluções sob medida para caixilharia de alumínio, fachadas de vidro e divisórias.</p>
+                    <div class="service-arrow"><i data-lucide="arrow-up-right" size="24"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="section-padding">
+        <div class="container">
+            <span class="section-tag">Como Trabalhamos</span>
+            <h2 class="section-title">Processo Transparente e Eficiente</h2>
+
+            <div class="process-steps">
+                <div class="process-step active reveal">
+                    <div class="step-num">ETAPA 01</div>
+                    <h3 class="step-title">Fale Connosco</h3>
+                    <p class="step-desc">Apresente a sua necessidade ou projeto por telefone, WhatsApp ou formulário.</p>
+                </div>
+                <div class="process-step active reveal">
+                    <div class="step-num">ETAPA 02</div>
+                    <h3 class="step-title">Análise Técnica</h3>
+                    <p class="step-desc">Avaliamos os detalhes, medições e especificações do serviço solicitado.</p>
+                </div>
+                <div class="process-step active reveal">
+                    <div class="step-num">ETAPA 03</div>
+                    <h3 class="step-title">Orçamento Clear</h3>
+                    <p class="step-desc">Apresentamos uma proposta financeira justa e detalhada sem custos ocultos.</p>
+                </div>
+                <div class="process-step active reveal">
+                    <div class="step-num">ETAPA 04</div>
+                    <h3 class="step-title">Execução</h3>
+                    <p class="step-desc">Realizamos o trabalho respeitando prazos, normas de segurança e acabamento.</p>
+                </div>
+                <div class="process-step active reveal">
+                    <div class="step-num">ETAPA 05</div>
+                    <h3 class="step-title">Entrega Final</h3>
+                    <p class="step-desc">Inspeção final juntamente com o cliente para garantia total de qualidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MASONRY GALLERY -->
+    <section class="section-padding" id="galeria" style="background-color: var(--clr-card);">
+        <div class="container">
+            <span class="section-tag">Portfólio</span>
+            <h2 class="section-title">Trabalhos Que Falam Por Si</h2>
+
+            <div class="gallery-filter">
+                <button class="filter-btn active">Todos</button>
+                <button class="filter-btn">Janelas</button>
+                <button class="filter-btn">Construção</button>
+                <button class="filter-btn">Acabamentos</button>
+            </div>
+
+            <div class="gallery-grid">
+                <a href="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" class="gallery-item tall glightbox reveal">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Instalação de Janela Moderna">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat">Janelas</span>
+                        <h4 class="gallery-title">Janelas Panorâmicas de Alumínio</h4>
+                    </div>
+                </a>
+
+                <a href="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" class="gallery-item wide glightbox reveal">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Obra e Construção">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat">Construção</span>
+                        <h4 class="gallery-title">Fornecimento de Estruturas</h4>
+                    </div>
+                </a>
+
+                <a href="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" class="gallery-item glightbox reveal">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Acabamento Residencial">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat">Acabamentos</span>
+                        <h4 class="gallery-title">Acabamento de Fachada Contemporânea</h4>
+                    </div>
+                </a>
+
+                <a href="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80" class="gallery-item glightbox reveal">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80" alt="Instalação Técnica">
+                    <div class="gallery-overlay">
+                        <span class="gallery-cat">Instalações</span>
+                        <h4 class="gallery-title">Ajuste e Alinhamento Técnico</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section section-padding" id="avaliacoes">
+        <div class="container">
+            <span class="section-tag">Depoimentos</span>
+            <h2 class="section-title">O Que Dizem os Nossos Clientes</h2>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i data-lucide="star" size="16" fill="#f59e0b"></i>
+                                <i data-lucide="star" size="16" fill="#f59e0b"></i>
+                                <i data-lucide="star" size="16" fill="#f59e0b"></i>
+                                <i data-lucide="star" size="16" fill="#f59e0b"></i>
+                                <i data-lucide="star" size="16" fill="#f59e0b"></i>
+                            </div>
+                            <p class="testimonial-text">"A equipe da RUCO SERVIÇOS realizou a instalação das janelas de alumínio da nossa residência com extrema precisão e pontualidade. Excelente acabamento!"</p>
+                            <div class="client-name">[Nome do Cliente / Empresa]</div>
+                            <div class="client-role">Serviço de Instalação de Janelas</div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="stars">
+                                <i data-lucide="star" size="16" fill="#f59e0b"></i>
+                                <i data-lucide="star" size="16" fill="#f59e0b"></i>
+                                <i data-lucide="star" size="16" fill="#f59e0b"></i>
+                                <i data-lucide="star" size="16" fill="#f59e0b"></i>
+                                <i data-lucide="star" size="16" fill="#f59e0b"></i>
+                            </div>
+                            <p class="testimonial-text">"Materiais de construção de excelente qualidade fornecidos no prazo combinado para nossa obra. Atendimento muito sério e profissional."</p>
+                            <div class="client-name">[Nome do Cliente / Empresa]</div>
+                            <div class="client-role">Fornecimento de Materiais</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST WORDS MARQUEE -->
+    <div class="trust-words">
+        <div class="trust-track">
+            <span class="trust-word">Qualidade</span> •
+            <span class="trust-word">Profissionalismo</span> •
+            <span class="trust-word">Precisão</span> •
+            <span class="trust-word">Bom Atendimento</span> •
+            <span class="trust-word">Compromisso</span> •
+            <span class="trust-word">Qualidade</span> •
+            <span class="trust-word">Profissionalismo</span> •
+            <span class="trust-word">Precisão</span> •
+        </div>
+    </div>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section section-padding">
+        <div class="container reveal">
+            <h2 class="section-title light" style="font-size: 2.8rem;">Tem um projeto em mente?</h2>
+            <p style="max-width: 600px; margin: 0 auto 32px; color: #cbd5e1;">Fale com a RUCO SERVIÇOS e obtenha soluções eficientes e orçamentos transparentes para o seu empreendimento.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="#contacto" class="btn btn-primary">Solicitar Orçamento</a>
+                <a href="https://wa.me/258879395370?text=Ol%C3%A1%20RUCO%20SERVI%C3%87OS!%20Gostaria%20de%20solicitar%20informa%C3%A7%C3%B5es%20sobre%20os%20vossos%20servi%C3%A7os." target="_blank" class="btn btn-outline" style="background-color: #25d366; border-color: #25d366; color: #fff;">
+                    <i data-lucide="message-circle" size="18"></i> Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section-padding" id="contacto">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="reveal">
+                    <span class="section-tag">Contacto Directo</span>
+                    <h2 class="section-title">Estamos Prontos para Atender o Seu Pedido</h2>
+                    <p style="color: var(--clr-text-muted);">Entre em contacto connosco para esclarecer dúvidas, solicitar cotações ou agendar uma visita técnica.</p>
+
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="contact-icon"><i data-lucide="phone" size="20"></i></div>
+                            <div>
+                                <strong>Telefone & WhatsApp</strong>
+                                <p><a href="tel:+258879395370" style="color: var(--clr-primary);">+258 87 939 5370</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon"><i data-lucide="clock" size="20"></i></div>
+                            <div>
+                                <strong>Horário de Funcionamento</strong>
+                                <p>Segunda a Sábado: Aberto até às 17:00</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon"><i data-lucide="map-pin" size="20"></i></div>
+                            <div>
+                                <strong>Localização</strong>
+                                <p>[Adicionar endereço completo / Cidade, Moçambique]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form reveal">
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" class="form-control" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone / WhatsApp</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="+258 ..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Tipo de Serviço</label>
+                            <select id="service" class="form-control">
+                                <option>Instalação de Janelas</option>
+                                <option>Materiais de Construção</option>
+                                <option>Soluções para Obras</option>
+                                <option>Acabamentos</option>
+                                <option>Outro Serviço</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem / Detalhes do Projeto</label>
+                            <textarea id="message" class="form-control" placeholder="Descreva brevemente a sua necessidade..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Enviar Pedido de Orçamento</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/258879395370?text=Ol%C3%A1%20RUCO%20SERVI%C3%87OS!%20Gostaria%20de%20solicitar%20informa%C3%A7%C3%B5es%20sobre%20os%20vossos%20servi%C3%A7os." class="whatsapp-btn" target="_blank" aria-label="Fale connosco no WhatsApp">
+        <i data-lucide="message-circle" size="32"></i>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">RUCO <span>SERVIÇOS</span></div>
+                    <p style="font-size: 0.9rem; line-height: 1.5;">Soluções profissionais para construção, instalação de janelas e acabamentos com padrão superior de qualidade em Moçambique.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Navegação</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#avaliacoes">Avaliações</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#contacto">Orçamentos</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Contacto Directo</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 10px;">Telefone: +258 87 939 5370</p>
+                    <p style="font-size: 0.9rem;">Horário: Aberto até às 17:00</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 RUCO SERVIÇOS. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- THIRD PARTY SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- INTERACTION LOGIC & ANIMATIONS -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        hamburgerBtn.addEventListener('click', () => mobileMenu.classList.add('active'));
+        closeMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('active')));
+
+        // Reveal Animations on Scroll
+        const observerOptions = { threshold: 0.15 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Number Counters Animation
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+                    let count = 0;
+                    const speed = target / 50;
+
+                    const updateCount = () => {
+                        count += speed;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count);
+                            setTimeout(updateCount, 30);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        // Initialize Lightbox
+        const lightbox = GLightbox({ selector: '.glightbox' });
+
+        // Initialize Swiper Testimonials
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            breakpoints: {
+                768: { slidesPerView: 2 }
+            }
+        });
+    </script>
+</body>
+</html>
